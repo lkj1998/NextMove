@@ -3,60 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>观棋丙丁 NextMove | Investor Deck</title>
+    <title>观棋丙丁 NextMove | Investor Deck Final</title>
     <meta name="description" content="基于 Bio-Meta (生物玄学) 的人生决策优化系统">
     
-    <!-- Tailwind CSS (via CDN) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Lucide Icons (via CDN) -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Custom Config -->
+    <!-- Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        stone: {
-                            50: '#fafaf9',
-                            100: '#f5f5f4',
-                            200: '#e7e5e4',
-                            300: '#d6d3d1',
-                            400: '#a8a29e',
-                            500: '#78716c',
-                            600: '#57534e',
-                            700: '#44403c',
-                            800: '#292524',
-                            900: '#1c1917',
-                        },
-                        emerald: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            200: '#a7f3d0',
-                            300: '#6ee7b7',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
-                            800: '#065f46',
-                            900: '#064e3b',
-                        },
-                        amber: {
-                            50: '#fffbeb',
-                            100: '#fef3c7',
-                            200: '#fde68a',
-                            300: '#fcd34d',
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
-                            700: '#b45309',
-                            800: '#92400e',
-                            900: '#78350f',
-                        }
+                        stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1', 400: '#a8a29e', 500: '#78716c', 600: '#57534e', 700: '#44403c', 800: '#292524', 900: '#1c1917' },
+                        emerald: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' },
+                        amber: { 50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309', 800: '#92400e', 900: '#78350f' },
+                        indigo: { 50: '#eef2ff', 100: '#e0e7ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#312e81' }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -68,119 +36,84 @@
     </script>
 
     <style>
-        body {
-            background-color: #F7F5F0; /* Custom Zen Beige */
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
+        body { background-color: #F7F5F0; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.5); }
     </style>
 </head>
-<body class="text-stone-800 font-sans selection:bg-emerald-100 pb-20">
+<body class="text-stone-800 font-sans selection:bg-emerald-100 pb-24">
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md border-b border-stone-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-gradient-to-br from-emerald-700 to-amber-700 rounded-lg flex items-center justify-center text-white font-bold text-xs shadow-sm">
-                    NM
-                </div>
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-gradient-to-br from-emerald-700 to-amber-700 rounded-lg flex items-center justify-center text-white font-bold text-xs shadow-sm">NM</div>
                 <h1 class="text-xl font-bold text-stone-900 tracking-wider font-serif">
                     观棋丙丁 <span class="text-stone-400 font-light font-sans">| NextMove</span>
                 </h1>
             </div>
             <div class="flex items-center gap-3">
-                <span class="text-xs font-mono text-stone-400 hidden md:inline-block">PRD v7.2 Implemented</span>
-                <div class="text-xs font-mono text-emerald-800 bg-emerald-50 px-2 py-1 rounded border border-emerald-100 font-semibold">
+                <span class="text-xs font-mono text-stone-400 hidden md:inline-block tracking-tight">PRD v7.1 + Rare Strategy</span>
+                <div class="text-xs font-mono text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded border border-emerald-100 font-semibold shadow-sm">
                     Investor Deck Final
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 md:px-8 pt-12 space-y-32">
+    <main class="max-w-7xl mx-auto px-4 md:px-8 pt-16 space-y-32">
 
         <!-- ================= SECTION 1: 商业架构全景图 ================= -->
         <section>
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-stone-900 mb-4 tracking-tight font-serif">
+                <h2 class="text-3xl md:text-5xl font-bold text-stone-900 mb-6 tracking-tight font-serif">
                     商业架构全景图
                 </h2>
-                <p class="text-lg text-stone-500 max-w-2xl mx-auto leading-relaxed">
-                    基于 <span class="font-semibold text-emerald-700">Bio-Meta (生物玄学)</span> 理论，构建从硬件引流、数据校准到生态变现的漏斗式闭环。
+                <p class="text-lg text-stone-500 max-w-3xl mx-auto leading-relaxed">
+                    基于 <span class="font-semibold text-emerald-700 border-b border-emerald-200">Bio-Meta (生物玄学)</span> 理论，以稀缺硬件为锚点，通过“标准化校准”构建高净值数据闭环。
                 </p>
             </div>
 
-            <div class="relative flex flex-col items-center">
+            <div class="relative flex flex-col items-center gap-8">
                 
-                <!-- LAYER 1: 硬件入口 (Top) -->
-                <div class="relative bg-white rounded-3xl p-8 border border-stone-200 shadow-sm w-full z-30 transition-transform hover:scale-[1.01] duration-500">
+                <!-- LAYER 1: 硬件入口 (Top - Traffic Source) -->
+                <div class="relative bg-white rounded-[2rem] p-8 border border-stone-200 shadow-sm w-full z-30 transition-transform hover:scale-[1.005] duration-500">
                     <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-stone-800 text-stone-100 px-6 py-2 rounded-full text-xs font-bold border border-stone-600 tracking-widest uppercase shadow-lg flex items-center gap-2">
-                        <i data-lucide="filter" class="w-3 h-3 text-emerald-400"></i>
-                        LAYER 1: Hardware Traffic (流量 & 锚点)
+                        <i data-lucide="filter" class="w-3 h-3 text-emerald-400"></i> LAYER 1: Hardware Traffic (流量 & 锚点)
                     </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
                         <!-- Card 1 -->
-                        <div class="bg-white p-5 rounded-2xl border border-stone-200 hover:border-emerald-300 hover:shadow-lg transition-all group">
+                        <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200 hover:border-emerald-300 transition-all group">
                             <div class="flex justify-between items-start mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="p-2.5 rounded-xl text-emerald-600 bg-emerald-50 group-hover:scale-110 transition-transform">
-                                        <i data-lucide="zap" class="w-5 h-5"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-bold text-stone-800">赛博香囊</h4>
-                                        <span class="text-[10px] bg-stone-100 px-2 py-0.5 rounded text-stone-500 font-medium border border-stone-200">流量款 / 盲盒</span>
-                                    </div>
+                                    <div class="p-2.5 rounded-xl text-emerald-600 bg-white shadow-sm group-hover:scale-110 transition-transform"><i data-lucide="zap" class="w-5 h-5"></i></div>
+                                    <div><h4 class="text-sm font-bold text-stone-800">赛博香囊</h4><span class="text-[10px] bg-stone-200 px-2 py-0.5 rounded text-stone-500">流量款</span></div>
                                 </div>
                                 <span class="text-sm font-mono font-bold text-amber-600">¥39-59</span>
                             </div>
-                            <div class="space-y-1.5">
-                                <div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>Y2K透明壳</div>
-                                <div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>断码屏</div>
-                                <div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>社交裂变</div>
-                            </div>
+                            <div class="space-y-1.5"><div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>Y2K透明壳 / 断码屏</div></div>
                         </div>
-
                         <!-- Card 2 -->
-                        <div class="bg-white p-5 rounded-2xl border border-stone-200 hover:border-stone-400 hover:shadow-lg transition-all group">
+                        <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200 hover:border-stone-400 transition-all group">
                             <div class="flex justify-between items-start mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="p-2.5 rounded-xl text-stone-600 bg-stone-200 group-hover:scale-110 transition-transform">
-                                        <i data-lucide="gem" class="w-5 h-5"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-bold text-stone-800">无事牌</h4>
-                                        <span class="text-[10px] bg-stone-100 px-2 py-0.5 rounded text-stone-500 font-medium border border-stone-200">商务款</span>
-                                    </div>
+                                    <div class="p-2.5 rounded-xl text-stone-600 bg-white shadow-sm group-hover:scale-110 transition-transform"><i data-lucide="gem" class="w-5 h-5"></i></div>
+                                    <div><h4 class="text-sm font-bold text-stone-800">无事牌</h4><span class="text-[10px] bg-stone-200 px-2 py-0.5 rounded text-stone-500">商务款</span></div>
                                 </div>
                                 <span class="text-sm font-mono font-bold text-amber-600">¥199</span>
                             </div>
-                            <div class="space-y-1.5">
-                                <div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>仿玉/黑檀</div>
-                                <div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>隐形屏幕</div>
-                                <div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>NFC交互</div>
-                            </div>
+                            <div class="space-y-1.5"><div class="flex items-center text-xs text-stone-500"><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2"></div>仿玉黑檀 / 隐形屏</div></div>
                         </div>
-
                         <!-- Card 3: Rare Edition -->
                         <div class="bg-gradient-to-br from-amber-50 to-white p-5 rounded-2xl border border-amber-200 shadow-md relative overflow-hidden group hover:shadow-xl transition-all">
-                            <div class="absolute top-0 right-0 bg-amber-500 text-white text-[9px] px-2 py-1 font-bold rounded-bl-lg z-10">YEARLY GIFT</div>
+                            <div class="absolute top-0 right-0 bg-amber-500 text-white text-[9px] px-3 py-1 font-bold rounded-bl-xl z-10 shadow-sm">YEARLY GIFT</div>
                             <div class="absolute inset-0 bg-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="flex justify-between items-start mb-4 relative z-10">
                                 <div class="flex items-center gap-3">
-                                    <div class="p-2.5 rounded-xl text-amber-600 bg-amber-100 group-hover:scale-110 transition-transform">
-                                        <i data-lucide="sparkles" class="w-5 h-5"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-bold text-stone-800">稀有联名款</h4>
-                                        <span class="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded font-medium border border-amber-200">Limited / Rare</span>
-                                    </div>
+                                    <div class="p-2.5 rounded-xl text-amber-600 bg-amber-100 group-hover:scale-110 transition-transform"><i data-lucide="sparkles" class="w-5 h-5"></i></div>
+                                    <div><h4 class="text-sm font-bold text-stone-800">稀有联名款</h4><span class="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded border border-amber-200">Limited / Rare</span></div>
                                 </div>
                                 <span class="text-sm font-mono font-bold text-amber-600">非卖品</span>
                             </div>
@@ -192,172 +125,235 @@
                         </div>
                     </div>
                     
-                    <!-- Arrow -->
-                    <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                        <span class="text-[10px] text-stone-400 mb-1 font-medium tracking-wider uppercase">NFC / 扫码激活</span>
-                        <div class="animate-bounce"><i data-lucide="arrow-down" class="text-emerald-600 w-6 h-6"></i></div>
+                    <div class="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 text-stone-400">
+                        <span class="text-[10px] font-medium tracking-wider uppercase mb-1">NFC / 扫码激活</span>
+                        <div class="animate-bounce"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
                     </div>
                 </div>
 
-                <!-- LAYER 2: 中间层 (Middle) -->
-                <div class="relative bg-white rounded-3xl p-10 border border-emerald-100 shadow-[0_20px_60px_-15px_rgba(16,185,129,0.05)] w-full mt-10 z-20">
+                <!-- LAYER 2: 中间层 (Middle - Core) -->
+                <div class="relative bg-white rounded-[2.5rem] p-10 border border-emerald-100 shadow-[0_20px_60px_-15px_rgba(16,185,129,0.08)] w-full z-20 mt-4">
                     <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-emerald-50 text-emerald-800 px-6 py-2 rounded-full text-xs font-bold border border-emerald-200 tracking-widest uppercase shadow-sm flex items-center gap-2">
-                        <i data-lucide="cpu" class="w-3 h-3"></i>
-                        LAYER 2: Core OS (数据校准引擎)
+                        <i data-lucide="cpu" class="w-3 h-3"></i> LAYER 2: Core OS (数据校准引擎)
                     </div>
 
-                    <div class="flex flex-col lg:flex-row gap-10 items-stretch justify-between mt-6">
-                        <!-- Left: Users -->
-                        <div class="w-full lg:w-1/3 flex flex-col gap-5">
-                            <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200 flex-1 transition-colors hover:border-stone-300">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-stone-800 font-bold text-sm">访客模式 (Guest)</h3>
-                                    <span class="text-[10px] bg-stone-200 text-stone-600 px-2 py-0.5 rounded font-medium">Free</span>
-                                </div>
-                                <ul class="text-xs text-stone-500 space-y-2.5">
-                                    <li class="flex items-center"><i data-lucide="scan-line" class="w-4 h-4 mr-2 text-stone-400"></i>静态八字排盘</li>
-                                    <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-stone-400"></i>基础 AI 聊愈</li>
+                    <div class="flex flex-col lg:flex-row gap-8 items-stretch justify-between mt-6">
+                        
+                        <!-- 2.1 会员体系 -->
+                        <div class="w-full lg:w-1/4 flex flex-col gap-4">
+                            <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200">
+                                <div class="flex justify-between items-center mb-2"><h3 class="text-stone-800 font-bold text-sm">访客 (Guest)</h3><span class="text-[10px] bg-stone-200 px-2 py-0.5 rounded">Free</span></div>
+                                <ul class="text-xs text-stone-500 space-y-1">
+                                    <li class="flex items-center"><i data-lucide="scan-line" class="w-3 h-3 mr-2"></i>扫码解卦</li>
+                                    <li class="flex items-center"><i data-lucide="zap" class="w-3 h-3 mr-2"></i>基础聊愈</li>
                                 </ul>
                             </div>
-                            <div class="flex justify-center -my-3 z-10"><i data-lucide="arrow-down" class="text-emerald-300 w-5 h-5"></i></div>
-                            <div class="bg-gradient-to-br from-emerald-50 to-white p-5 rounded-2xl border border-emerald-200 relative overflow-hidden group shadow-sm flex-1 transition-all hover:shadow-md">
-                                <div class="flex justify-between items-center mb-3 relative z-10">
-                                    <h3 class="text-emerald-900 font-bold text-sm">Life+ 会员 (Pro)</h3>
-                                    <span class="text-[10px] bg-emerald-600 text-white px-2 py-0.5 rounded shadow-sm">Paid</span>
+                            <div class="flex justify-center -my-2 text-emerald-300"><i data-lucide="arrow-down" class="w-4 h-4"></i></div>
+                            <div class="bg-gradient-to-br from-emerald-50 to-white p-4 rounded-2xl border border-emerald-200 shadow-sm relative overflow-hidden">
+                                <div class="flex justify-between items-center mb-2 relative z-10"><h3 class="text-emerald-900 font-bold text-sm">Life+ (Pro)</h3><span class="text-[10px] bg-emerald-600 text-white px-2 py-0.5 rounded shadow-sm">Paid</span></div>
+                                <ul class="text-xs text-stone-600 space-y-1 relative z-10">
+                                    <li class="flex items-center"><i data-lucide="gift" class="w-3 h-3 mr-2 text-amber-500"></i><span class="font-bold">送稀有硬件</span></li>
+                                    <li class="flex items-center"><i data-lucide="brain-circuit" class="w-3 h-3 mr-2 text-emerald-500"></i>Gemini 3.0 Pro</li>
+                                    <li class="flex items-center"><i data-lucide="history" class="w-3 h-3 mr-2 text-emerald-500"></i>永久记忆</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 2.2 校准闸门 (NEW!) -->
+                        <div class="w-full lg:w-1/4 flex flex-col items-center justify-center relative">
+                            <div class="absolute top-1/2 -left-4 -translate-y-1/2 text-stone-300 hidden lg:block"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+                            
+                            <div class="bg-white p-5 rounded-2xl border-2 border-indigo-100 shadow-md w-full relative overflow-hidden group hover:shadow-lg transition-all">
+                                <div class="absolute top-0 left-0 w-full h-1.5 bg-indigo-500"></div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <h3 class="text-indigo-900 font-bold text-sm">校准仪式 (Gate)</h3>
+                                    <i data-lucide="clipboard-list" class="w-4 h-4 text-indigo-500"></i>
                                 </div>
-                                <div class="space-y-2 mb-3 relative z-10">
-                                    <div class="flex items-center gap-2 text-xs text-stone-600 bg-white/60 p-1.5 rounded-lg border border-emerald-100/50">
-                                        <i data-lucide="clipboard-check" class="w-4 h-4 text-emerald-600"></i>
-                                        <span class="font-semibold">标准化反馈问卷</span>
+                                <p class="text-[10px] text-stone-500 mb-4 leading-tight">解锁板块前需完成 <span class="text-indigo-600 font-semibold">MBTI 式流年测试</span>，获取 L3 数据。</p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 text-[10px] text-stone-600 bg-indigo-50 p-2 rounded-lg border border-indigo-100">
+                                        <i data-lucide="lock" class="w-3 h-3 text-stone-400"></i> 
+                                        <span>财富板块</span>
+                                        <span class="ml-auto text-indigo-600 font-mono text-[9px] bg-white px-1 rounded border border-indigo-200">Pending</span>
                                     </div>
-                                    <div class="flex items-center gap-2 text-xs text-amber-700 bg-amber-50 p-1.5 rounded-lg border border-amber-100/50">
-                                        <i data-lucide="gift" class="w-4 h-4 text-amber-600"></i>
-                                        <span class="font-bold">赠送稀有联名硬件</span>
+                                    <div class="flex items-center gap-2 text-[10px] text-stone-600 bg-indigo-50 p-2 rounded-lg border border-indigo-100">
+                                        <i data-lucide="lock" class="w-3 h-3 text-stone-400"></i> 
+                                        <span>健康板块</span>
+                                        <span class="ml-auto text-indigo-600 font-mono text-[9px] bg-white px-1 rounded border border-indigo-200">Pending</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Center: Engine -->
-                        <div class="w-full lg:w-1/3 flex flex-col items-center justify-center relative py-8">
-                            <div class="absolute w-56 h-56 bg-emerald-100/50 rounded-full blur-3xl animate-pulse mix-blend-multiply"></div>
-                            <div class="bg-white p-8 rounded-full border-4 border-emerald-50 relative z-10 flex flex-col items-center justify-center w-44 h-44 shadow-2xl animate-float">
-                                <i data-lucide="cpu" class="w-10 h-10 text-emerald-600 mb-2"></i>
-                                <h3 class="text-emerald-900 font-bold text-center leading-tight text-sm">Bio-Meta<br/>Engine</h3>
-                                <span class="text-[10px] text-stone-400 mt-2 text-center font-medium leading-tight">RLMF反馈闭环<br/>& 双重验证</span>
-                            </div>
-                            <div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-200 to-transparent -z-0"></div>
+                        <!-- 2.3 核心引擎 -->
+                        <div class="w-full lg:w-1/4 flex flex-col items-center justify-center relative">
+                             <div class="absolute top-1/2 -left-4 -translate-y-1/2 text-stone-300 hidden lg:block"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+                             
+                             <div class="bg-stone-900 p-6 rounded-full border-4 border-emerald-500/20 relative z-10 flex flex-col items-center justify-center w-40 h-40 shadow-xl animate-float">
+                                <i data-lucide="cpu" class="w-8 h-8 text-emerald-400 mb-2"></i>
+                                <h3 class="text-emerald-400 font-bold text-center leading-tight text-sm">Bio-Meta<br>Engine</h3>
+                                <span class="text-[10px] text-stone-400 mt-1 text-center leading-tight">RLMF 闭环<br>双重验证</span>
+                             </div>
                         </div>
 
-                        <!-- Right: Data -->
-                        <div class="w-full lg:w-1/3">
+                        <!-- 2.4 数据沉淀 -->
+                        <div class="w-full lg:w-1/4">
+                            <div class="absolute top-1/2 -left-4 -translate-y-1/2 text-stone-300 hidden lg:block"><i data-lucide="arrow-right" class="w-6 h-6"></i></div>
+
                             <div class="bg-stone-50 p-6 rounded-2xl border border-dashed border-stone-300 h-full flex flex-col justify-center relative overflow-hidden">
-                                <div class="absolute top-0 right-0 w-20 h-20 bg-amber-100/50 rounded-bl-full -mr-4 -mt-4 z-0"></div>
-                                <h3 class="text-amber-800 font-bold mb-5 flex items-center text-sm relative z-10">
-                                    <i data-lucide="database" class="w-4 h-4 mr-2 text-amber-600"></i>
-                                    PostgreSQL Core Tables
+                                <h3 class="text-amber-800 font-bold mb-4 flex items-center text-xs uppercase tracking-wider">
+                                    <i data-lucide="database" class="w-3 h-3 mr-2 text-amber-600"></i> Structured Data
                                 </h3>
-                                <div class="space-y-4 relative z-10">
-                                    <!-- DB Item 1 -->
-                                    <div class="p-3 rounded-lg border bg-indigo-50 border-indigo-100 text-indigo-800 flex justify-between items-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div class="flex items-center gap-3">
-                                            <i data-lucide="users" class="w-3 h-3 opacity-70"></i>
-                                            <span class="text-xs font-bold">users</span>
-                                        </div>
-                                        <span class="text-[10px] opacity-70 font-medium tracking-wide uppercase">PII 分离 / 路由标签</span>
+                                <div class="space-y-3 relative z-10">
+                                    <div class="p-2.5 rounded-lg border bg-white border-stone-200 shadow-sm flex justify-between items-center">
+                                        <span class="text-[10px] font-bold">L1: OS</span> <span class="text-[9px] text-stone-400 font-mono">八字/紫微</span>
                                     </div>
-                                    <!-- DB Item 2 -->
-                                    <div class="p-3 rounded-lg border bg-amber-50 border-amber-100 text-amber-800 flex justify-between items-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div class="flex items-center gap-3">
-                                            <i data-lucide="file-json" class="w-3 h-3 opacity-70"></i>
-                                            <span class="text-xs font-bold">life_timeline</span>
-                                        </div>
-                                        <span class="text-[10px] opacity-70 font-medium tracking-wide uppercase">问卷 / 财富归因</span>
+                                    <div class="p-2.5 rounded-lg border bg-indigo-50 border-indigo-100 text-indigo-900 shadow-sm flex justify-between items-center ring-1 ring-indigo-200">
+                                        <span class="text-[10px] font-bold">L3: Feedback</span> <span class="text-[9px] text-indigo-600 font-mono font-bold">校准问卷</span>
                                     </div>
-                                    <!-- DB Item 3 -->
-                                    <div class="p-3 rounded-lg border bg-rose-50 border-rose-100 text-rose-800 flex justify-between items-center shadow-sm hover:shadow-md transition-shadow">
-                                        <div class="flex items-center gap-3">
-                                            <i data-lucide="dna" class="w-3 h-3 opacity-70"></i>
-                                            <span class="text-xs font-bold">bio_profile</span>
-                                        </div>
-                                        <span class="text-[10px] opacity-70 font-medium tracking-wide uppercase">基因风险 / 慢性病</span>
+                                    <div class="p-2.5 rounded-lg border bg-rose-50 border-rose-100 text-rose-900 shadow-sm flex justify-between items-center">
+                                        <span class="text-[10px] font-bold">L4: Bio</span> <span class="text-[9px] text-rose-500 font-mono">基因/体检</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Arrow -->
-                    <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                        <span class="text-[10px] text-stone-400 mb-1 font-medium tracking-wider uppercase">High-Value Data Feed</span>
-                        <div class="animate-bounce"><i data-lucide="arrow-down" class="text-emerald-600 w-6 h-6"></i></div>
+                    <div class="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 text-stone-400">
+                        <span class="text-[10px] font-medium tracking-wider uppercase mb-1">High-Value Data Feed</span>
+                        <div class="animate-bounce"><i data-lucide="arrow-down" class="w-5 h-5"></i></div>
                     </div>
                 </div>
 
                 <!-- LAYER 3: B端生态 (Bottom) -->
-                <div class="relative bg-white/60 rounded-3xl p-8 border border-stone-200 shadow-sm backdrop-blur-sm w-full mt-10 z-10 group hover:shadow-md transition-all duration-500">
+                <div class="relative bg-white/60 rounded-[2rem] p-8 border border-stone-200 shadow-sm backdrop-blur-sm w-full mt-4 z-10 group hover:shadow-md transition-all">
                     <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-amber-50 text-amber-800 px-6 py-2 rounded-full text-xs font-bold border border-amber-200 tracking-widest uppercase shadow-sm z-10 flex items-center gap-2">
-                        <i data-lucide="building-2" class="w-3 h-3"></i>
-                        LAYER 3: B端生态接入 (MaaS 变现)
+                        <i data-lucide="building-2" class="w-3 h-3"></i> LAYER 3: B端生态接入 (MaaS)
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mt-6">
-                        <!-- B-End Card Template -->
-                        <div class="p-4 rounded-xl border transition-all hover:shadow-md hover:-translate-y-1 group cursor-default text-rose-600 bg-rose-50 border-rose-100">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i data-lucide="dna" class="w-5 h-5"></i>
-                                <span class="font-bold text-sm tracking-wide">精准医疗</span>
-                            </div>
-                            <p class="text-xs opacity-80 leading-relaxed font-medium">API: 基因弱点扫描 / 定制体检</p>
-                        </div>
-                        <div class="p-4 rounded-xl border transition-all hover:shadow-md hover:-translate-y-1 group cursor-default text-amber-600 bg-amber-50 border-amber-100">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i data-lucide="dollar-sign" class="w-5 h-5"></i>
-                                <span class="font-bold text-sm tracking-wide">金融风控</span>
-                            </div>
-                            <p class="text-xs opacity-80 leading-relaxed font-medium">API: 风险偏好指数 / 资产罗盘</p>
-                        </div>
-                        <div class="p-4 rounded-xl border transition-all hover:shadow-md hover:-translate-y-1 group cursor-default text-pink-600 bg-pink-50 border-pink-100">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i data-lucide="heart" class="w-5 h-5"></i>
-                                <span class="font-bold text-sm tracking-wide">婚恋匹配</span>
-                            </div>
-                            <p class="text-xs opacity-80 leading-relaxed font-medium">API: 深度合盘 / 情感危机预警</p>
-                        </div>
-                        <div class="p-4 rounded-xl border transition-all hover:shadow-md hover:-translate-y-1 group cursor-default text-purple-600 bg-purple-50 border-purple-100">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i data-lucide="users" class="w-5 h-5"></i>
-                                <span class="font-bold text-sm tracking-wide">家族传承</span>
-                            </div>
-                            <p class="text-xs opacity-80 leading-relaxed font-medium">API: 养老节点 / 资产隔离建议</p>
-                        </div>
-                        <div class="p-4 rounded-xl border transition-all hover:shadow-md hover:-translate-y-1 group cursor-default text-blue-600 bg-blue-50 border-blue-100">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i data-lucide="briefcase" class="w-5 h-5"></i>
-                                <span class="font-bold text-sm tracking-wide">人力资本</span>
-                            </div>
-                            <p class="text-xs opacity-80 leading-relaxed font-medium">API: 团队能量 / 职业赛道规划</p>
-                        </div>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+                        <div class="p-4 rounded-2xl border text-rose-600 bg-rose-50 border-rose-100 hover:-translate-y-1 transition-transform"><div class="flex items-center gap-2 mb-2"><i data-lucide="dna" class="w-4 h-4"></i><span class="font-bold text-xs">精准医疗</span></div><p class="text-[10px] opacity-80">API: 基因弱点扫描</p></div>
+                        <div class="p-4 rounded-2xl border text-amber-600 bg-amber-50 border-amber-100 hover:-translate-y-1 transition-transform"><div class="flex items-center gap-2 mb-2"><i data-lucide="dollar-sign" class="w-4 h-4"></i><span class="font-bold text-xs">金融风控</span></div><p class="text-[10px] opacity-80">API: 风险偏好指数</p></div>
+                        <div class="p-4 rounded-2xl border text-pink-600 bg-pink-50 border-pink-100 hover:-translate-y-1 transition-transform"><div class="flex items-center gap-2 mb-2"><i data-lucide="heart" class="w-4 h-4"></i><span class="font-bold text-xs">婚恋匹配</span></div><p class="text-[10px] opacity-80">API: 深度合盘</p></div>
+                        <div class="p-4 rounded-2xl border text-purple-600 bg-purple-50 border-purple-100 hover:-translate-y-1 transition-transform"><div class="flex items-center gap-2 mb-2"><i data-lucide="users" class="w-4 h-4"></i><span class="font-bold text-xs">家族传承</span></div><p class="text-[10px] opacity-80">API: 养老节点</p></div>
+                        <div class="p-4 rounded-2xl border text-blue-600 bg-blue-50 border-blue-100 hover:-translate-y-1 transition-transform"><div class="flex items-center gap-2 mb-2"><i data-lucide="briefcase" class="w-4 h-4"></i><span class="font-bold text-xs">人力资本</span></div><p class="text-[10px] opacity-80">API: 职业赛道规划</p></div>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- ================= SECTION 2: 校准仪式演示 (New!) ================= -->
+        <section>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4 tracking-tight font-serif">
+                    The Calibration Ritual (校准仪式)
+                </h2>
+                <p class="text-stone-500 max-w-2xl mx-auto">
+                    拒绝开放式聊天。通过 <span class="font-semibold text-indigo-600">MBTI 式流年问卷</span>，将非结构化的人生经历转化为高价值的结构化 L3 数据。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <!-- Visual: Mobile UI Mockup -->
+                <div class="relative mx-auto w-72 h-[560px] bg-stone-900 rounded-[3rem] border-8 border-stone-800 shadow-2xl overflow-hidden ring-4 ring-stone-200">
+                    <!-- Screen Content -->
+                    <div class="absolute inset-0 bg-stone-50 flex flex-col">
+                        <!-- Header -->
+                        <div class="bg-white p-5 border-b border-stone-100 flex items-center justify-between pt-12">
+                            <span class="text-xs font-bold text-stone-400 tracking-wider">NextMove</span>
+                            <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-1 rounded-full border border-indigo-100 font-medium animate-pulse">校准中...</span>
+                        </div>
+                        <!-- Chat/Quiz Interface -->
+                        <div class="p-5 flex-1 space-y-5 overflow-hidden">
+                            <!-- AI Question -->
+                            <div class="flex gap-3">
+                                <div class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-[10px] text-white shrink-0">NM</div>
+                                <div class="bg-white p-4 rounded-2xl rounded-tl-none text-xs text-stone-600 shadow-sm border border-stone-100 leading-relaxed">
+                                    <p class="mb-3"><span class="text-amber-600 font-bold">Q3: 回溯 2022 (壬寅年)</span></p>
+                                    <p>这年你的八字显示“金木交战”且“岁破”。请回忆，当年你的<strong>肝胆系统或睡眠质量</strong>是否出现过明显问题？</p>
+                                </div>
+                            </div>
+                            <!-- User Options (The Quiz) -->
+                            <div class="space-y-2.5 pl-11">
+                                <div class="bg-indigo-50 border border-indigo-200 p-3.5 rounded-xl text-xs text-indigo-800 font-medium flex items-center gap-3 cursor-pointer hover:bg-indigo-100 transition-colors shadow-sm">
+                                    <div class="w-4 h-4 rounded-full border-2 border-indigo-400 flex items-center justify-center"><div class="w-2 h-2 bg-indigo-600 rounded-full"></div></div> 
+                                    是，且伴随炎症/疼痛
+                                </div>
+                                <div class="bg-white border border-stone-200 p-3.5 rounded-xl text-xs text-stone-500 flex items-center gap-3 cursor-pointer hover:border-stone-300 transition-colors">
+                                    <div class="w-4 h-4 rounded-full border-2 border-stone-300"></div> 
+                                    否，身体无恙
+                                </div>
+                                <div class="bg-white border border-stone-200 p-3.5 rounded-xl text-xs text-stone-500 flex items-center gap-3 cursor-pointer hover:border-stone-300 transition-colors">
+                                    <div class="w-4 h-4 rounded-full border-2 border-stone-300"></div> 
+                                    是，但这年主要是失眠
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom -->
+                        <div class="p-5 bg-white border-t border-stone-100 pb-8">
+                            <div class="flex justify-between mb-2 text-[10px] text-stone-400 font-medium">
+                                <span>Health Calibration</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-stone-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-indigo-500 w-3/5 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explanation -->
+                <div class="space-y-8">
+                    <div class="p-6 rounded-2xl border bg-white border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-indigo-50 rounded-lg text-indigo-600"><i data-lucide="check-circle-2" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-stone-800">标准化输入 (Standardization)</h3>
+                        </div>
+                        <p class="text-sm text-stone-500 leading-relaxed">
+                            将模糊的记忆转化为数据库可读的强类型枚举 (Enum)。例如：<br>
+                            <code class="text-xs bg-stone-100 px-1 py-0.5 rounded text-indigo-600 mt-2 inline-block">Severity: HIGH</code> 
+                            <code class="text-xs bg-stone-100 px-1 py-0.5 rounded text-indigo-600 mt-2 inline-block">System: HEPATIC</code>
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border bg-white border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-amber-50 rounded-lg text-amber-600"><i data-lucide="history" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-stone-800">流年锚点 (Chronological Anchoring)</h3>
+                        </div>
+                        <p class="text-sm text-stone-500 leading-relaxed">
+                            不仅问“发生了什么”，更问“哪一年发生的”。将事件锚定在具体的**干支流年**上，训练算法精准判断用户对特定五行（如“火旺”）的敏感度。
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border bg-white border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-emerald-50 rounded-lg text-emerald-600"><i data-lucide="unlock" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-stone-800">价值门槛 (Value Gating)</h3>
+                        </div>
+                        <p class="text-sm text-stone-500 leading-relaxed">
+                            只有完成校准，才能解锁对应板块的深度预测。用户付出的数据越多，迁移成本越高，LTV 越高。这是构建 2000U 估值的基石。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Divider -->
         <div class="border-t border-dashed border-stone-300 relative">
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#F7F5F0] px-6 text-stone-400 text-xs tracking-widest uppercase font-semibold flex items-center gap-2">
-                <i data-lucide="cpu" class="w-3 h-3"></i> Tech Moat: Bio-Meta Pipeline
+                <i data-lucide="cpu" class="w-3 h-3"></i> Bio-Meta Pipeline
             </div>
         </div>
 
-        <!-- ================= SECTION 2: 核心算法管线 ================= -->
+        <!-- ================= SECTION 3: 核心算法管线 ================= -->
         <section>
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-3 font-serif">
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4 tracking-tight font-serif">
                     Bio-Meta 决策协议管线
                 </h2>
                 <p class="text-stone-500 max-w-2xl mx-auto">
-                    拒绝“AI 幻觉”。这是基于 <span class="font-semibold text-emerald-700">PRD 5.2</span> 的严谨推理流水线，确保每一次建议都有据可依。
+                    拒绝“AI 幻觉”。基于 <span class="font-semibold text-emerald-700">PRD 5.2</span> 的严谨推理流水线，确保每一次建议都有据可依。
                 </p>
             </div>
 
@@ -376,10 +372,10 @@
                 <!-- Step 2 -->
                 <div class="p-6 rounded-2xl border bg-indigo-50 border-indigo-200 ring-2 ring-indigo-100 h-full flex flex-col relative transition-all hover:-translate-y-1 hover:shadow-md">
                     <div class="absolute top-4 right-4 text-xs font-mono text-stone-300 font-bold">STEP 02</div>
-                    <div class="mb-4 p-3 bg-white rounded-xl w-fit shadow-sm text-stone-700"><i data-lucide="clipboard-check" class="w-6 h-6"></i></div>
+                    <div class="mb-4 p-3 bg-white rounded-xl w-fit shadow-sm text-indigo-600"><i data-lucide="clipboard-check" class="w-6 h-6"></i></div>
                     <h3 class="font-bold text-lg text-stone-800 mb-1">RAG校准</h3>
-                    <div class="text-xs font-mono text-stone-400 mb-3 tracking-wide">Calibration (L3 Data)</div>
-                    <p class="text-xs text-stone-500 leading-relaxed font-medium">检索 life_timeline。根据用户填写的'标准化反馈问卷'，修正八字参数的实际应验程度。</p>
+                    <div class="text-xs font-mono text-indigo-400 mb-3 tracking-wide font-bold">Calibration (L3 Data)</div>
+                    <p class="text-xs text-stone-500 leading-relaxed font-medium">调用 life_timeline。根据用户填写的'标准化反馈问卷'，修正八字参数的实际应验程度。</p>
                 </div>
                 <!-- Arrow -->
                 <i data-lucide="arrow-right" class="hidden md:block absolute top-1/2 left-[48%] text-stone-300 -translate-y-1/2 w-8 h-8"></i>
@@ -387,7 +383,7 @@
                 <!-- Step 3 -->
                 <div class="p-6 rounded-2xl border bg-amber-50 border-amber-200 h-full flex flex-col relative transition-all hover:-translate-y-1 hover:shadow-md">
                     <div class="absolute top-4 right-4 text-xs font-mono text-stone-300 font-bold">STEP 03</div>
-                    <div class="mb-4 p-3 bg-white rounded-xl w-fit shadow-sm text-stone-700"><i data-lucide="git-branch" class="w-6 h-6"></i></div>
+                    <div class="mb-4 p-3 bg-white rounded-xl w-fit shadow-sm text-amber-600"><i data-lucide="git-branch" class="w-6 h-6"></i></div>
                     <h3 class="font-bold text-lg text-stone-800 mb-1">战术起卦</h3>
                     <div class="text-xs font-mono text-stone-400 mb-3 tracking-wide">Tactical Divination</div>
                     <p class="text-xs text-stone-500 leading-relaxed font-medium">捕捉用户'意念点击'的真太阳时，起时家奇门局。战略看八字，战术看奇门。</p>
@@ -398,7 +394,7 @@
                 <!-- Step 4 -->
                 <div class="p-6 rounded-2xl border bg-rose-50 border-rose-200 h-full flex flex-col relative transition-all hover:-translate-y-1 hover:shadow-md">
                     <div class="absolute top-4 right-4 text-xs font-mono text-stone-300 font-bold">STEP 04</div>
-                    <div class="mb-4 p-3 bg-white rounded-xl w-fit shadow-sm text-stone-700"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                    <div class="mb-4 p-3 bg-white rounded-xl w-fit shadow-sm text-rose-600"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
                     <h3 class="font-bold text-lg text-stone-800 mb-1">生物双重验证</h3>
                     <div class="text-xs font-mono text-stone-400 mb-3 tracking-wide">Bio-Validation (L4)</div>
                     <p class="text-xs text-stone-500 leading-relaxed font-medium">最终风控。若八字显示'木弱'，且基因库显示'肝代谢风险'，发出红色医疗预警。</p>
@@ -406,114 +402,10 @@
             </div>
         </section>
 
-        <!-- ================= SECTION 3: 数据资产估值矩阵 ================= -->
+        <!-- ================= SECTION 4: 用户价值转化漏斗 (Unit Economics) ================= -->
         <section>
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-3 font-serif">
-                    单用户数据资产估值模型
-                </h2>
-                <p class="text-stone-500 max-w-2xl mx-auto">
-                    用户数据越厚，估值越高。NextMove 的价值在于<span class="font-semibold text-amber-600">L3 级以上的行为校准数据</span>。
-                </p>
-            </div>
-
-            <div class="bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-lg">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                    
-                    <!-- Left: Data Granularity -->
-                    <div class="p-10 border-b lg:border-b-0 lg:border-r border-stone-100">
-                        <h3 class="text-xl font-bold text-stone-800 mb-8 flex items-center">
-                            <i data-lucide="database" class="w-6 h-6 mr-3 text-emerald-600"></i>
-                            Data Granularity Layers
-                        </h3>
-                        <div class="space-y-8">
-                            <!-- L1 -->
-                            <div class="space-y-2">
-                                <div class="flex justify-between items-end">
-                                    <div><div class="text-sm font-bold text-stone-700">L1: 时空代码 (OS)</div><div class="text-[10px] text-stone-400 mt-0.5">真太阳时八字 / 奇门终身局</div></div>
-                                    <div class="font-mono font-bold text-stone-400 text-xl">$200</div>
-                                </div>
-                                <div class="h-2.5 w-full bg-stone-100 rounded-full overflow-hidden shadow-inner"><div class="h-full rounded-full w-[20%] bg-stone-300"></div></div>
-                            </div>
-                            <!-- L2 -->
-                            <div class="space-y-2">
-                                <div class="flex justify-between items-end">
-                                    <div><div class="text-sm font-bold text-stone-700">L2: 静态画像 (Profile)</div><div class="text-[10px] text-stone-400 mt-0.5">APP 行为标签 / 基础偏好</div></div>
-                                    <div class="font-mono font-bold text-stone-400 text-xl">$500</div>
-                                </div>
-                                <div class="h-2.5 w-full bg-stone-100 rounded-full overflow-hidden shadow-inner"><div class="h-full rounded-full w-[40%] bg-stone-300"></div></div>
-                            </div>
-                            <!-- L3 -->
-                            <div class="space-y-2">
-                                <div class="flex justify-between items-end">
-                                    <div><div class="text-sm font-bold text-indigo-700">L3: 后天校准 (Calibration)</div><div class="text-[10px] text-stone-400 mt-0.5">标准化反馈问卷 / 闭环数据</div></div>
-                                    <div class="font-mono font-bold text-amber-600 text-xl">$2,000</div>
-                                </div>
-                                <div class="h-2.5 w-full bg-stone-100 rounded-full overflow-hidden shadow-inner"><div class="h-full rounded-full w-[70%] bg-gradient-to-r from-emerald-500 to-amber-500"></div></div>
-                            </div>
-                            <!-- L4 -->
-                            <div class="space-y-2">
-                                <div class="flex justify-between items-end">
-                                    <div><div class="text-sm font-bold text-stone-700">L4: 生物硬件 (Bio-Hardware)</div><div class="text-[10px] text-stone-400 mt-0.5">全基因组测序(WGS) / 深度体检</div></div>
-                                    <div class="font-mono font-bold text-stone-400 text-xl">$5,000+</div>
-                                </div>
-                                <div class="h-2.5 w-full bg-stone-100 rounded-full overflow-hidden shadow-inner"><div class="h-full rounded-full w-full bg-gradient-to-r from-rose-500 to-purple-600"></div></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: Multipliers -->
-                    <div class="p-10 bg-stone-50/50">
-                        <h3 class="text-xl font-bold text-stone-800 mb-8 flex items-center">
-                            <i data-lucide="trending-up" class="w-6 h-6 mr-3 text-amber-600"></i>
-                            Valuation Multipliers
-                        </h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                            <div class="p-4 bg-white rounded-xl border border-stone-200 shadow-sm hover:border-amber-300 transition-colors group">
-                                <div class="flex justify-between items-start mb-2">
-                                    <div class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4 text-stone-400 group-hover:text-amber-500 transition-colors"></i><span class="font-bold text-xs text-stone-700">不可篡改性</span></div>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold border border-emerald-100">Lifetime</span>
-                                </div>
-                                <p class="text-[10px] text-stone-500 leading-tight">八字与基因数据终身有效，无需重复采集。</p>
-                            </div>
-                            <div class="p-4 bg-white rounded-xl border border-stone-200 shadow-sm hover:border-amber-300 transition-colors group">
-                                <div class="flex justify-between items-start mb-2">
-                                    <div class="flex items-center gap-2"><i data-lucide="crown" class="w-4 h-4 text-stone-400 group-hover:text-amber-500 transition-colors"></i><span class="font-bold text-xs text-stone-700">高净值浓度</span></div>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold border border-emerald-100">High</span>
-                                </div>
-                                <p class="text-[10px] text-stone-500 leading-tight">付费用户天然具备高焦虑、高支付能力特征。</p>
-                            </div>
-                            <div class="p-4 bg-white rounded-xl border border-stone-200 shadow-sm hover:border-amber-300 transition-colors group">
-                                <div class="flex justify-between items-start mb-2">
-                                    <div class="flex items-center gap-2"><i data-lucide="building-2" class="w-4 h-4 text-stone-400 group-hover:text-amber-500 transition-colors"></i><span class="font-bold text-xs text-stone-700">B端迁移成本</span></div>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold border border-emerald-100">Lock-in</span>
-                                </div>
-                                <p class="text-[10px] text-stone-500 leading-tight">一旦B端机构接入风控标签，替换成本极高。</p>
-                            </div>
-                            <div class="p-4 bg-white rounded-xl border border-stone-200 shadow-sm hover:border-amber-300 transition-colors group">
-                                <div class="flex justify-between items-start mb-2">
-                                    <div class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-stone-400 group-hover:text-amber-500 transition-colors"></i><span class="font-bold text-xs text-stone-700">合规安全性</span></div>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold border border-emerald-100">GDPR</span>
-                                </div>
-                                <p class="text-[10px] text-stone-500 leading-tight">原生支持 PII 分离，符合数据出境规范。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Divider -->
-        <div class="border-t border-dashed border-stone-300 relative">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#F7F5F0] px-6 text-stone-400 text-xs tracking-widest uppercase font-semibold flex items-center gap-2">
-                <i data-lucide="dollar-sign" class="w-3 h-3"></i> Updated Unit Economics
-            </div>
-        </div>
-
-        <!-- ================= SECTION 4: 用户价值转化漏斗 ================= -->
-        <section>
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-3 font-serif">
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4 tracking-tight font-serif">
                     用户价值转化漏斗
                 </h2>
                 <p class="text-stone-500 max-w-2xl mx-auto">
@@ -524,116 +416,62 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                 <!-- Funnel Left -->
                 <div class="lg:col-span-8 space-y-4">
-                    
-                    <!-- Funnel Item 1 -->
-                    <div class="w-full mx-auto transition-all hover:scale-[1.01] duration-300">
-                        <div class="p-4 rounded-xl border shadow-sm bg-stone-200 border-stone-300 flex flex-col sm:flex-row justify-between items-center gap-4">
-                            <div class="flex items-center gap-4 flex-1 w-full">
-                                <div class="p-2.5 bg-white/80 rounded-full shadow-sm shrink-0"><i data-lucide="users" class="w-5 h-5 text-stone-700"></i></div>
-                                <div><h3 class="font-bold text-sm md:text-base text-stone-800">1. 硬件入口 (Traffic)</h3><p class="text-xs text-stone-500 font-medium">赛博香囊 / 盲盒 / 礼品</p></div>
-                            </div>
-                            <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50">
-                                <div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">硬件售价</div><div class="font-bold text-xs md:text-sm text-stone-700">¥39-59</div></div>
-                                <div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">获客成本(CAC)</div><div class="font-bold text-xs md:text-sm text-emerald-700">≈ ¥0</div></div>
-                            </div>
-                        </div>
+                    <!-- Step 1 -->
+                    <div class="w-full mx-auto p-4 rounded-xl border shadow-sm bg-stone-200 border-stone-300 flex justify-between items-center gap-4 transition-transform hover:scale-[1.01]">
+                        <div class="flex items-center gap-4"><div class="p-2 bg-white/80 rounded-full shadow-sm"><i data-lucide="users" class="w-5 h-5 text-stone-700"></i></div><div><h3 class="font-bold text-sm md:text-base text-stone-800">1. 硬件入口 (Traffic)</h3><p class="text-xs text-stone-500 font-medium">赛博香囊 / 盲盒 / 礼品</p></div></div>
+                        <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50"><div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">售价</div><div class="font-bold text-xs md:text-sm text-stone-700">¥39-59</div></div><div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">CAC</div><div class="font-bold text-xs md:text-sm text-emerald-700">≈ ¥0</div></div></div>
                     </div>
                     <div class="flex justify-center -my-2 relative z-0 w-full lg:w-[90%]"><i data-lucide="arrow-down" class="text-stone-300 w-5 h-5 animate-bounce"></i></div>
 
-                    <!-- Funnel Item 2 -->
-                    <div class="w-[95%] transition-all hover:scale-[1.01] duration-300">
-                        <div class="p-4 rounded-xl border shadow-sm bg-emerald-50 border-emerald-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-                            <div class="flex items-center gap-4 flex-1 w-full">
-                                <div class="p-2.5 bg-white/80 rounded-full shadow-sm shrink-0"><i data-lucide="smartphone" class="w-5 h-5 text-stone-700"></i></div>
-                                <div><h3 class="font-bold text-sm md:text-base text-stone-800">2. App 激活 (Activation)</h3><p class="text-xs text-stone-500 font-medium">扫码解卦 / 建立 L1 档案</p></div>
-                            </div>
-                            <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50">
-                                <div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">转化率</div><div class="font-bold text-xs md:text-sm text-stone-700">60%+</div></div>
-                                <div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">沉淀</div><div class="font-bold text-xs md:text-sm text-stone-700">L1 八字</div></div>
-                            </div>
-                        </div>
+                    <!-- Step 2 -->
+                    <div class="w-[95%] p-4 rounded-xl border shadow-sm bg-emerald-50 border-emerald-200 flex justify-between items-center gap-4 transition-transform hover:scale-[1.01]">
+                        <div class="flex items-center gap-4"><div class="p-2 bg-white/80 rounded-full shadow-sm"><i data-lucide="smartphone" class="w-5 h-5 text-stone-700"></i></div><div><h3 class="font-bold text-sm md:text-base text-stone-800">2. App 激活 (Activation)</h3><p class="text-xs text-stone-500 font-medium">扫码解卦 / 建立 L1 档案</p></div></div>
+                        <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50"><div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">转化率</div><div class="font-bold text-xs md:text-sm text-stone-700">60%+</div></div><div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">沉淀</div><div class="font-bold text-xs md:text-sm text-stone-700">L1 八字</div></div></div>
                     </div>
                     <div class="flex justify-center -my-2 relative z-0 w-full lg:w-[90%]"><i data-lucide="arrow-down" class="text-stone-300 w-5 h-5 animate-bounce"></i></div>
 
-                    <!-- Funnel Item 3: Subscription + Gift -->
-                    <div class="w-[90%] transition-all hover:scale-[1.01] duration-300">
-                        <div class="p-4 rounded-xl border shadow-sm bg-emerald-100 border-emerald-300 flex flex-col sm:flex-row justify-between items-center gap-4">
-                            <div class="flex items-center gap-4 flex-1 w-full">
-                                <div class="p-2.5 bg-white/80 rounded-full shadow-sm shrink-0"><i data-lucide="crown" class="w-5 h-5 text-stone-700"></i></div>
-                                <div><h3 class="font-bold text-sm md:text-base text-stone-800">3. 会员订阅 (Subscription)</h3><p class="text-xs text-stone-500 font-medium">年费会员 + 赠送稀有联名硬件</p></div>
-                            </div>
-                            <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50">
-                                <div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">年费订阅</div><div class="font-bold text-xs md:text-sm text-emerald-800">¥299/年</div></div>
-                                <div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">稀有硬件</div><div class="font-bold text-xs md:text-sm text-amber-600">Free Gift</div></div>
-                            </div>
-                        </div>
+                    <!-- Step 3: Subscription + Gift -->
+                    <div class="w-[90%] p-4 rounded-xl border shadow-sm bg-emerald-100 border-emerald-300 flex justify-between items-center gap-4 transition-transform hover:scale-[1.01]">
+                        <div class="flex items-center gap-4"><div class="p-2 bg-white/80 rounded-full shadow-sm"><i data-lucide="crown" class="w-5 h-5 text-stone-700"></i></div><div><h3 class="font-bold text-sm md:text-base text-stone-800">3. 会员订阅 (Subscription)</h3><p class="text-xs text-stone-500 font-medium">年费会员 + <span class="text-amber-700 font-bold">赠送稀有联名硬件</span></p></div></div>
+                        <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50"><div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">订阅费</div><div class="font-bold text-xs md:text-sm text-emerald-800">¥299/年</div></div><div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">权益</div><div class="font-bold text-xs md:text-sm text-amber-600">Free Gift</div></div></div>
                     </div>
                     <div class="flex justify-center -my-2 relative z-0 w-full lg:w-[90%]"><i data-lucide="arrow-down" class="text-stone-300 w-5 h-5 animate-bounce"></i></div>
 
-                    <!-- Funnel Item 4: Calibration -->
-                    <div class="w-[85%] transition-all hover:scale-[1.01] duration-300">
-                        <div class="p-4 rounded-xl border shadow-sm bg-indigo-50 border-indigo-200 ring-2 ring-indigo-200 ring-offset-2 flex flex-col sm:flex-row justify-between items-center gap-4">
-                            <div class="flex items-center gap-4 flex-1 w-full">
-                                <div class="p-2.5 bg-white/80 rounded-full shadow-sm shrink-0"><i data-lucide="clipboard-check" class="w-5 h-5 text-stone-700"></i></div>
-                                <div><h3 class="font-bold text-sm md:text-base text-stone-800">4. 后天校准 (Calibration)</h3><p class="text-xs text-stone-500 font-medium">填写标准化反馈问卷 / 生成 L3 数据</p></div>
-                            </div>
-                            <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50">
-                                <div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">问卷完成率</div><div class="font-bold text-xs md:text-sm text-stone-700">80%+</div></div>
-                                <div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">数据价值</div><div class="font-bold text-xs md:text-sm text-indigo-700">$2,000/u</div></div>
-                            </div>
-                        </div>
+                    <!-- Step 4: Gamified Calibration -->
+                    <div class="w-[85%] p-4 rounded-xl border shadow-sm bg-indigo-50 border-indigo-200 ring-2 ring-indigo-200 ring-offset-2 flex justify-between items-center gap-4 transition-transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-4"><div class="p-2 bg-white rounded-full shadow-sm"><i data-lucide="clipboard-check" class="w-5 h-5 text-indigo-600"></i></div><div><h3 class="font-bold text-sm md:text-base text-stone-800">4. 游戏化校准 (Gamified Quiz)</h3><p class="text-xs text-stone-500 font-medium">填写标准化流年问卷 / 生成 L3 数据</p></div></div>
+                        <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50"><div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">完成率</div><div class="font-bold text-xs md:text-sm text-stone-700">80%+</div></div><div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">数据价值</div><div class="font-bold text-xs md:text-sm text-indigo-700">$2,000/u</div></div></div>
                     </div>
                     <div class="flex justify-center -my-2 relative z-0 w-full lg:w-[90%]"><i data-lucide="arrow-down" class="text-stone-300 w-5 h-5 animate-bounce"></i></div>
 
-                    <!-- Funnel Item 5: MaaS -->
-                    <div class="w-[80%] transition-all hover:scale-[1.01] duration-300">
-                        <div class="p-4 rounded-xl border shadow-sm bg-gradient-to-r from-amber-100 to-amber-50 border-amber-300 flex flex-col sm:flex-row justify-between items-center gap-4">
-                            <div class="flex items-center gap-4 flex-1 w-full">
-                                <div class="p-2.5 bg-white/80 rounded-full shadow-sm shrink-0"><i data-lucide="building-2" class="w-5 h-5 text-stone-700"></i></div>
-                                <div><h3 class="font-bold text-sm md:text-base text-stone-800">5. 生态变现 (MaaS Upside)</h3><p class="text-xs text-stone-500 font-medium">L4 基因测序接入 / 高端信托</p></div>
-                            </div>
-                            <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50">
-                                <div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">单客ARPU</div><div class="font-bold text-xs md:text-sm text-amber-800">¥5000+</div></div>
-                                <div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">利润率</div><div class="font-bold text-xs md:text-sm text-stone-700">80%+</div></div>
-                            </div>
-                        </div>
+                    <!-- Step 5: MaaS -->
+                    <div class="w-[80%] p-4 rounded-xl border shadow-sm bg-gradient-to-r from-amber-100 to-amber-50 border-amber-300 flex justify-between items-center gap-4 transition-transform hover:scale-[1.01]">
+                        <div class="flex items-center gap-4"><div class="p-2 bg-white/80 rounded-full shadow-sm"><i data-lucide="building-2" class="w-5 h-5 text-stone-700"></i></div><div><h3 class="font-bold text-sm md:text-base text-stone-800">5. 生态变现 (MaaS Upside)</h3><p class="text-xs text-stone-500 font-medium">L4 基因测序接入 / 高端信托</p></div></div>
+                        <div class="flex gap-3 bg-white/50 px-4 py-2 rounded-lg border border-white/50"><div class="text-center px-2"><div class="text-[9px] text-stone-400 uppercase">ARPU</div><div class="font-bold text-xs md:text-sm text-amber-800">¥5000+</div></div><div class="text-center px-2 border-l border-stone-200/50"><div class="text-[9px] text-stone-400 uppercase">利润率</div><div class="font-bold text-xs md:text-sm text-stone-700">80%+</div></div></div>
                     </div>
-
                 </div>
-
+                
                 <!-- Funnel Insights -->
                 <div class="lg:col-span-4 bg-white/60 p-8 rounded-3xl border border-stone-200 sticky top-28 shadow-sm">
                     <h3 class="text-stone-900 font-bold mb-6 text-lg border-b border-stone-200 pb-3">核心投资逻辑</h3>
-                    <div class="space-y-8">
-                        <div class="group">
-                            <div class="flex items-center gap-3 mb-2 text-stone-800">
-                                <div class="p-2 bg-amber-50 rounded-lg text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors shadow-sm border border-amber-100"><i data-lucide="target" class="w-4 h-4"></i></div>
-                                <h4 class="font-bold text-sm">负成本获客 (CAC < 0)</h4>
-                            </div>
+                    <ul class="space-y-8">
+                        <li class="group">
+                            <div class="flex items-center gap-3 mb-2 text-stone-800"><div class="p-2 bg-amber-50 rounded-lg text-amber-600 shadow-sm border border-amber-100"><i data-lucide="target" class="w-4 h-4"></i></div><h4 class="font-bold text-sm">负成本获客 (CAC < 0)</h4></div>
                             <p class="text-xs text-stone-500 leading-relaxed border-l-2 border-stone-200 pl-4 group-hover:border-amber-400 transition-colors">硬件即广告。用卖货的逻辑做增长，不仅不烧钱，反而有现金流。</p>
-                        </div>
-                        <div class="group">
-                            <div class="flex items-center gap-3 mb-2 text-stone-800">
-                                <div class="p-2 bg-amber-50 rounded-lg text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors shadow-sm border border-amber-100"><i data-lucide="sparkles" class="w-4 h-4"></i></div>
-                                <h4 class="font-bold text-sm">稀缺性锚点 (Scarcity)</h4>
-                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="flex items-center gap-3 mb-2 text-stone-800"><div class="p-2 bg-amber-50 rounded-lg text-amber-600 shadow-sm border border-amber-100"><i data-lucide="sparkles" class="w-4 h-4"></i></div><h4 class="font-bold text-sm">稀缺性锚点 (Scarcity)</h4></div>
                             <p class="text-xs text-stone-500 leading-relaxed border-l-2 border-stone-200 pl-4 group-hover:border-amber-400 transition-colors">通过'订阅送稀有硬件'，将玄学的不确定性转化为物理资产的确定性，极大提升转化率。</p>
-                        </div>
-                        <div class="group">
-                            <div class="flex items-center gap-3 mb-2 text-stone-800">
-                                <div class="p-2 bg-amber-50 rounded-lg text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors shadow-sm border border-amber-100"><i data-lucide="trending-up" class="w-4 h-4"></i></div>
-                                <h4 class="font-bold text-sm">数据资产化 (Data Asset)</h4>
-                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="flex items-center gap-3 mb-2 text-stone-800"><div class="p-2 bg-amber-50 rounded-lg text-amber-600 shadow-sm border border-amber-100"><i data-lucide="database" class="w-4 h-4"></i></div><h4 class="font-bold text-sm">数据资产化 (Data Asset)</h4></div>
                             <p class="text-xs text-stone-500 leading-relaxed border-l-2 border-stone-200 pl-4 group-hover:border-amber-400 transition-colors">L3 级校准数据是核心壁垒。随着时间推移，用户模型越用越准，迁移成本无限高。</p>
-                        </div>
-                        <div class="group">
-                            <div class="flex items-center gap-3 mb-2 text-stone-800">
-                                <div class="p-2 bg-amber-50 rounded-lg text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors shadow-sm border border-amber-100"><i data-lucide="credit-card" class="w-4 h-4"></i></div>
-                                <h4 class="font-bold text-sm">估值对标 (Benchmarking)</h4>
-                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="flex items-center gap-3 mb-2 text-stone-800"><div class="p-2 bg-amber-50 rounded-lg text-amber-600 shadow-sm border border-amber-100"><i data-lucide="trending-up" class="w-4 h-4"></i></div><h4 class="font-bold text-sm">估值对标 (Benchmarking)</h4></div>
                             <p class="text-xs text-stone-500 leading-relaxed border-l-2 border-stone-200 pl-4 group-hover:border-amber-400 transition-colors">对标 Manus (2000U/user)。我们拥有比其更深维度的'生物+时空'全息数据。</p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
